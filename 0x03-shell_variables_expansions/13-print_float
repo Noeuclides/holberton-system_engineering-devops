@@ -1,2 +1,2 @@
 #!/bin/bash
-printf %If NUM
+printf %If $NUM
