@@ -2,23 +2,20 @@
 # This script is displaying "Holberton School" 10 times but hi at nine
 
 for i in {1..20}; do
-    if [ $i -eq 4 ]
-    then
-	echo $i
-	echo "bad luck from China"
-    else
-    if [ $i -eq 9 ]
-    then
-	echo $i
-	echo "bad luck from Japan"
-    else
-    if [ $i -eq 17 ]
-    then
-	echo $i
-	echo "bad luck from Italy"
-    else
-	echo $i
-    fi
-    fi
-    fi
+    case $i in
+	4)
+	    echo $i
+	    echo "bad luck from China"
+	    ;;
+	9)
+	    echo $i
+	    echo "bad luck from Japan"
+	    ;;
+	17)
+	    echo $i
+	    echo "bad luck from Italy"
+	    ;;
+	*)
+	    echo $i
+    esac
 done
