@@ -1,1 +1,8 @@
 #!/usr/bin/env bash
+# This script is displaying "Holberton School" 10 times
+
+for i in LIST
+do
+    tr -d *-
+    echo i
+done
