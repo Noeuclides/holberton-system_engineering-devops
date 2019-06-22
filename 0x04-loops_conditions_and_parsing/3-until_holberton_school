@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# This script is displaying "Holberton School" 10 times
+c=0
+
+until [ $c -gt 9 ]
+do
+    echo "Holberton School"
+    ((c++))
+done

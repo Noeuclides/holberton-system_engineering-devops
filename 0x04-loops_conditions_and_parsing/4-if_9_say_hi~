@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# This script is displaying "Holberton School" 10 times but hi at nine
+for i in {0..9}; do
+    if [ $i -eq 8 ]
+	then
+	echo "Hi"
+    fi
+    echo "Holberton School"
+done
