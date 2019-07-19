@@ -1,1 +1,2 @@
 #!/usr/bin/env bash
+ip a s | grep -w inet | awk '{ print $2}' | cut -d "/" -f 1
