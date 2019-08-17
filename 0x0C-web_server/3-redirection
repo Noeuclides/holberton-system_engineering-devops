@@ -1,1 +1,4 @@
 #!/usr/bin/env bash
+# redirection
+sed '5c\sed '37a\\trewrite ^/redirect_me https://www.youtube.com/watch?v=QH2-TGUlwu4 permanent;' /etc/nginx/sites-enabled/default' 1-install_nginx_web_server
+./1-install_nginx_web_server 
