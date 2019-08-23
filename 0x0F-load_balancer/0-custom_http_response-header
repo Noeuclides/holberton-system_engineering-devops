@@ -1,1 +1,4 @@
 #!/usr/bin/env bash
+# header value
+sed -i "30a\ \\tadd_header X-Served-By $HOSTNAME;" /etc/nginx/sites-enabled/default
+service nginx restart
