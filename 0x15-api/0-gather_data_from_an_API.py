@@ -21,6 +21,6 @@ try:
     print("Employee {} is done with tasks({}/{}):".format(name, done, task))
     for i in range(task):
         if info_todo[i].get('completed') is True:
-            print("     {}".format(info_todo[i].get('title')))
+            print("\t {}".format(info_todo[i].get('title')))
 except:
     pass
