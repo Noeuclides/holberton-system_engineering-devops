@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """return information about employee
 """
-
+import csv
 import requests
 from sys import argv
 
@@ -12,15 +12,17 @@ try:
                             params={'userId': argv[1]})
     info_user = req_user.json()
     name = info_user[0].get('name')
+    username = info_user[0].get('username')
+    id = info_user[0].get('id')
     info_todo = req_todo.json()
-    done = 0
     task = len(info_todo)
-    for i in range(task):
-        if info_todo[i].get('completed') is True:
-            done = done + 1
-    print("Employee {} is done with tasks({}/{}):".format(name, done, task))
-    for i in range(task):
-        if info_todo[i].get('completed') is True:
-            print("     {}".format(info_todo[i].get('title')))
-except:
+    row = []
+    filename = argv[1] + '.csv'
+    with open(filename, mode='w') as f:
+        writer = csv.writer(f, quoting=csv.QUOTE_ALL)
+
+        for i in range(task):
+            writer.writerow([argv[1], username, info_todo[i].get(
+                'completed'), info_todo[i].get('title')])
+except BaseException:
     pass
